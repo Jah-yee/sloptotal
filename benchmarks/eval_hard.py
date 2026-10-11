@@ -12,6 +12,7 @@ Usage:
 """
 
 import asyncio
+import os
 import random
 import time
 import json
@@ -22,7 +23,7 @@ import httpx
 import numpy as np
 from datasets import load_dataset
 
-API_URL = "http://localhost:8000"
+API_URL = os.getenv("SLOPTOTAL_URL", "http://localhost:8000")
 SEED = 42
 CONCURRENCY = 2
 

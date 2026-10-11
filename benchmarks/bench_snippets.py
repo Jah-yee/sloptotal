@@ -5,8 +5,9 @@ import asyncio
 import time
 import httpx
 import statistics
+import os
 
-API = "http://localhost:8000"
+API = os.getenv("SLOPTOTAL_URL", "http://localhost:8000")
 
 # Realistic snippets: mix of lengths, AI and human text
 SNIPPETS = [
